@@ -143,15 +143,15 @@ public class Texteditor extends JFrame implements ActionListener {
             this.setSize(wigth, height);
         }
         if (e.getSource()==print){
-            PrintJob pjob=tk.getPrintJob(Frame1.this,"Print",null,null);
-            try{
-                Graphics p = pjob.getGraphics();
-                jTextArea1.printAll(p);
-                jLabel1.setText("状态: 打印成功完成!");
-                p.dispose();
-                pjob.end();
-            }catch(NullPointerException exception){
-                exception.printStackTrace();
+//            PrintJob pjob=tk.getPrintJob(Frame1.this,"Print",null,null);
+//            try{
+//                Graphics p = pjob.getGraphics();
+//                jTextArea1.printAll(p);
+//                jLabel1.setText("状态: 打印成功完成!");
+//                p.dispose();
+//                pjob.end();
+//            }catch(NullPointerException exception){
+//                exception.printStackTrace();
         }
         if(e.getSource()==copy){
             panel.copy();
