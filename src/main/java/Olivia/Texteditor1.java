@@ -53,9 +53,9 @@ public class Texteditor1 extends JFrame implements ActionListener {
         open=new JMenuItem("Open");
         save=new JMenuItem("Save");
         saveto=new JMenuItem("saveas");
-        set=new JMenuItem("页面设置");
-        print=new JMenuItem("打印");
-        exit=new JMenuItem("退出");
+        set=new JMenuItem("Layout");
+        print=new JMenuItem("Print");
+        exit=new JMenuItem("Exit");
 
         cut=new JMenuItem("cut");
         copy=new JMenuItem("copy");
@@ -63,11 +63,10 @@ public class Texteditor1 extends JFrame implements ActionListener {
         searchtext =new JMenuItem("searchtext");
         selectall =new JMenuItem("selectall");
         time =new JMenuItem("date & time");
-        zdhh=new JCheckBoxMenuItem("自动换行");
-        font=new JMenuItem("字体");
-        ztl=new JMenuItem("状态栏");
-        ckbz=new JMenuItem("查看帮助");
-        about =new JMenuItem("关于记事本");
+        zdhh=new JCheckBoxMenuItem("Line Wrap");
+        font=new JMenuItem("fontsize");
+
+        about =new JMenuItem("About");
 
         //菜单栏项目加到菜单栏
         menubar.add(file);
@@ -113,9 +112,6 @@ public class Texteditor1 extends JFrame implements ActionListener {
         format.add(zdhh);
         format.add(font);
 
-        view.add(ztl);
-
-        help.add(ckbz);
         help.add(about);
 
         //添加事件监听器
@@ -123,6 +119,7 @@ public class Texteditor1 extends JFrame implements ActionListener {
         open.addActionListener(this);
         save.addActionListener(this);
         saveto.addActionListener(this);
+        print.addActionListener(this);
         set.addActionListener(this);
         exit.addActionListener(this);
         about.addActionListener(this);
@@ -135,7 +132,6 @@ public class Texteditor1 extends JFrame implements ActionListener {
         paste.addActionListener(this);
         selectall.addActionListener(this);
         time.addActionListener(this);
-        print.setEnabled(false);   //实现打印功能
 
         this.setJMenuBar(menubar);           //Texteditor设置菜单栏
         panel=new JTextArea();                 //新建文本域
@@ -192,8 +188,18 @@ public class Texteditor1 extends JFrame implements ActionListener {
             int height=Integer.parseInt(str[1]);
             this.setSize(wigth, height); }
         if (e.getSource()==print){
-            print.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
-            print.addActionListener(this);
+//            print.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
+//            print.addActionListener(this);
+            try{
+                boolean done = panel.print();
+                if (done){
+                    System.out.println("Successful Print!");
+                }else {
+                    System.out.println("Error!");
+                }
+            }catch (Exception pex){
+                pex.printStackTrace();
+            }
         }
         if(e.getSource()==time){
             SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
