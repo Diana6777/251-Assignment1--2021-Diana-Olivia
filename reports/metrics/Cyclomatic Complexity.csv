@@ -1,0 +1,14 @@
+Metrics,÷‹ŒÂ, 15 10‘¬ 2021 23:35:23 GMT+08:00
+Method,v(G)
+"Olivia.AppTest.shouldAnswerWithTrue()",1
+"Olivia.Texteditor1.Chazhao.Chazhao()",1
+"Olivia.Texteditor1.Chazhao.actionPerformed(ActionEvent)",2
+"Olivia.Texteditor1.Texteditor1()",5
+"Olivia.Texteditor1.actionPerformed(ActionEvent)",21
+"Olivia.Texteditor1.copy()",1
+"Olivia.Texteditor1.createFile()",4
+"Olivia.Texteditor1.main(String[])",1
+"Olivia.Texteditor1.openFile()",5
+"Olivia.Texteditor1.paste()",6
+"Olivia.Texteditor1.saveFile(File)",5
+
