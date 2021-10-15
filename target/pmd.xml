@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2021-10-15T21:08:47.884">
+<file name="D:\playground\159.251\assignment\251-Assignment1--2021-Diana-Olivia\src\main\java\Olivia\Texteditor1.java">
+<violation beginline="167" endline="167" begincolumn="21" endcolumn="24" rule="UnusedLocalVariable" ruleset="Best Practices" package="Olivia" class="Texteditor1" method="main" variable="note" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'note'.
+</violation>
+<violation beginline="297" endline="297" begincolumn="13" endcolumn="33" rule="ReturnFromFinallyBlock" ruleset="Error Prone" package="Olivia" class="Texteditor1" method="openFile" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#returnfromfinallyblock" priority="3">
+Avoid returning from a finally block
+</violation>
+<violation beginline="307" endline="307" begincolumn="40" endcolumn="50" rule="UselessQualifiedThis" ruleset="Code Style" package="Olivia" class="Texteditor1" method="createFile" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessqualifiedthis" priority="3">
+Useless qualified this usage in the same class.
+</violation>
+<violation beginline="318" endline="318" begincolumn="44" endcolumn="54" rule="UselessQualifiedThis" ruleset="Code Style" package="Olivia" class="Texteditor1" method="createFile" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessqualifiedthis" priority="3">
+Useless qualified this usage in the same class.
+</violation>
+<violation beginline="335" endline="335" begincolumn="43" endcolumn="53" rule="UselessQualifiedThis" ruleset="Code Style" package="Olivia" class="Texteditor1" method="saveFile" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessqualifiedthis" priority="3">
+Useless qualified this usage in the same class.
+</violation>
+<violation beginline="342" endline="343" begincolumn="15" endcolumn="13" rule="EmptyCatchBlock" ruleset="Error Prone" package="Olivia" class="Texteditor1" method="saveFile" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<error filename="D:\playground\159.251\assignment\251-Assignment1--2021-Diana-Olivia\src\main\java\Olivia\Texteditor.java" msg="PMDException: Error while parsing D:\playground\159.251\assignment\251-Assignment1--2021-Diana-Olivia\src\main\java\Olivia\Texteditor.java">
+<![CDATA[net.sourceforge.pmd.PMDException: Error while parsing D:\playground\159.251\assignment\251-Assignment1--2021-Diana-Olivia\src\main\java\Olivia\Texteditor.java
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCodeWithoutCache(SourceCodeProcessor.java:124)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:100)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:62)
+	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:85)
+	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:29)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: net.sourceforge.pmd.lang.java.ast.ParseException: Encountered " "catch" "catch "" at line 283, column 15.
+Was expecting:
+    "}" ...
+    
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.generateParseException(JavaParser.java:13532)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.jj_consume_token(JavaParser.java:13416)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.Block(JavaParser.java:5590)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.TryStatement(JavaParser.java:6721)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.Statement(JavaParser.java:5508)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.BlockStatement(JavaParser.java:5671)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.Block(JavaParser.java:5588)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.MethodDeclaration(JavaParser.java:2130)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.ClassOrInterfaceBodyDeclaration(JavaParser.java:1811)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.ClassOrInterfaceBody(JavaParser.java:1764)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.ClassOrInterfaceDeclaration(JavaParser.java:905)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.TypeDeclaration(JavaParser.java:807)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.CompilationUnit(JavaParser.java:527)
+	at net.sourceforge.pmd.lang.java.AbstractJavaParser.parse(AbstractJavaParser.java:62)
+	at net.sourceforge.pmd.lang.AbstractParser.doParse(AbstractParser.java:44)
+	at net.sourceforge.pmd.SourceCodeProcessor.parse(SourceCodeProcessor.java:136)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSource(SourceCodeProcessor.java:200)
+	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCodeWithoutCache(SourceCodeProcessor.java:118)
+	... 10 more
+]]>
+</error>
+</pmd>
